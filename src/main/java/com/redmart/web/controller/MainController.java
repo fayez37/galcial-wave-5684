@@ -2,7 +2,6 @@ package com.redmart.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -12,13 +11,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.redmart.employee.model.Employee;
 import com.redmart.employee.service.EmployeeService;
 
 @Controller
@@ -38,7 +35,7 @@ public class MainController {
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Network Element Setup Manager");
 		model.addObject("message", "Network Element Setup Manager");
-		model.setViewName("userNetworkElement");
+		model.setViewName("login");
 		return model;
 
 	}
@@ -109,7 +106,7 @@ public class MainController {
 
 	}
 	
-	@RequestMapping(value = "/changePassword", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/changePassword", method = RequestMethod.GET)
 	public ModelAndView changePassword(ModelAndView model, HttpServletRequest request) {
 	    Employee employee = new Employee();
 	    model.addObject("networkElement", employee);
@@ -156,5 +153,5 @@ public class MainController {
 		    model.addObject("error","Invalid email id");
 		    return model;
 		}
-	}
+	}*/
 }

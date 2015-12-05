@@ -35,15 +35,15 @@
 		</property>
 	</bean>
 
-	<bean id="employeeDao" class="com.alcatel.employee.dao.EmployeeDaoImpl">
+	<bean id="employeeDao" class="com.redmart.employee.dao.EmployeeDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="employeeDetailsService" class="com.alcatel.employee.service.EmployeeDetailsService">
+	<bean id="employeeDetailsService" class="com.redmart.employee.service.EmployeeDetailsService">
 		<property name="employeeDao" ref="employeeDao" />
 	</bean>
 	
-	<bean id="employeeService" class="com.alcatel.employee.service.EmployeeService">
+	<bean id="employeeService" class="com.redmart.employee.service.EmployeeService">
 		<property name="employeeDao" ref="employeeDao" />
 	</bean>
 	
