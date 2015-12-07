@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2015 12:25:19 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.redmart.tickets.model.Ticket" table="ticket_info" dynamic-update="true">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="status" type="java.lang.String">
+            <column name="status" />
+        </property>
+        <property name="complaintArea" type="java.lang.String">
+            <column name="complaintArea" />
+        </property>
+        <many-to-one name="createdBy" class="com.redmart.employee.model.Employee" fetch="select">
+            <column name="createdBy" />
+        </many-to-one>
+        <many-to-one name="customer" class="com.redmart.customer.model.Customer" fetch="select">
+            <column name="customerId" />
+        </many-to-one>
+        <many-to-one name="assignedTo" class="com.redmart.employee.model.Employee" fetch="select">
+            <column name="assignedTo" />
+        </many-to-one>
+        <set name="comments" cascade="none" inverse="true" table="comments_info" lazy="true" mutable="false">
+            <key>
+                <column name="ticketId" />
+            </key>
+            <one-to-many class="com.redmart.tickets.model.Comments" />
+        </set>
+    </class>
+</hibernate-mapping>

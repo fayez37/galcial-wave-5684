@@ -29,6 +29,19 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	}
 	
+
+	@SuppressWarnings("unchecked")
+	public List<String> findAllEmployeeMailId(String emailId) {
+		List<String> employeeList = new ArrayList<String>();
+		employeeList = getSessionFactory().getCurrentSession()
+			.createQuery("select emailId from Employee").list();
+		if (employeeList.size() > 0) {
+			return employeeList;
+		} else {
+			return null;
+		}
+	}
+	
 	public void save(Employee employee) {
 		EmployeeRole employeeRole = new EmployeeRole();
 		employeeRole.setRole("ROLE_USER");

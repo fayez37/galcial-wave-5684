@@ -37,7 +37,7 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
 
-	<h1>Login to manage your Network Element</h1>
+	<h1>Login to handle Customer Complaints</h1>
 
 	<div id="login-box">
 
@@ -55,7 +55,7 @@
 
 			<table>
 				<tr>
-					<td>User:</td>
+					<td>Email Id:</td>
 					<td><input type='text' name='username'></td>
 				</tr>
 				<tr>

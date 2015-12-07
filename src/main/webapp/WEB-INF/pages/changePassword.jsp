@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>New User</title>
+<title>Change Password</title>
 </head>
 <body>
 	<h1>Change Password</h1>
@@ -36,7 +36,7 @@
 			</h2>
 		</c:if>
     	<div align="center">
-	        <form:form action="savePassword" method="post" modelAttribute="networkElement">
+	        <form:form action="savePassword" method="post" modelAttribute="employee">
 	        <table>
 	            <tr>
 	                <td>Password:</td>

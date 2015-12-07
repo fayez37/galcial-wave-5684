@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2015 12:24:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.redmart.customer.model.Customer" table="customer_info">
+        <id name="emailId" type="string">
+            <column name="email_Id" length="200" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="mobileNo" type="java.lang.Long">
+            <column name="mobileNo" />
+        </property>
+    </class>
+</hibernate-mapping>

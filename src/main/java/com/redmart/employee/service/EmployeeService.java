@@ -1,5 +1,7 @@
 package com.redmart.employee.service;
 
+import java.util.List;
+
 import com.redmart.employee.dao.EmployeeDao;
 import com.redmart.employee.model.Employee;
 
@@ -23,5 +25,10 @@ public class EmployeeService {
 	public void save(Employee employee)
 	{
 		employeeDao.save(employee);
+	}
+	
+	public List<String> findAllEmployeeMailId(String emailId)
+	{
+		return employeeDao.findAllEmployeeMailId(emailId);
 	}
 }

@@ -5,7 +5,7 @@
     <class name="com.redmart.employee.model.EmployeeRole" table="employee_roles">
         <id name="employeeRoleId" type="java.lang.Integer">
             <column name="employee_role_id" />
-            <generator class="identity" />
+            <generator class="increment" />
         </id>
         <many-to-one name="employee" class="com.redmart.employee.model.Employee" fetch="select">
             <column name="email_id" length="200" not-null="true" />
